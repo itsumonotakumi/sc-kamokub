@@ -14,10 +14,9 @@
 
 ## 公開手順（GitHub Pages）
 
-1. このフォルダをGitHubの新しいリポジトリにpushする（ブランチは `main`）
-2. リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** にする
-3. **Actions** タブで「Build & Deploy to GitHub Pages」が走るのを待つ（初回は数分）
-4. `https://<ユーザー名>.github.io/<リポジトリ名>/` をスマホで開き、ホーム画面に追加
+1. `main` にpushすると、Actions「Build & Publish (gh-pages)」がサイトを作って `gh-pages` ブランチに出力する
+2. GitHub Pagesは `gh-pages` ブランチから配信（表示されないときは **Settings → Pages → Source** を「Deploy from a branch」「gh-pages / (root)」にする）
+3. `https://<ユーザー名>.github.io/<リポジトリ名>/` をスマホで開き、ホーム画面に追加
 
 ワークフローがIPAのPDFを取得 → `pdftoppm` で画像化。問題冊子は文字情報のないスキャンPDFなので、Tesseract（日本語）でOCRして問の区切りと設問を読み取り → `data/catalog.json` を生成してデプロイします。**PDFや画像はリポジトリにコミットしません。**
 
