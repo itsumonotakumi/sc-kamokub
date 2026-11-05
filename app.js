@@ -326,7 +326,7 @@
         <button class="btn ghost" id="prev" ${i === 0 ? "disabled" : ""}>← 前へ</button>
         ${i < slots.length - 1 ? `<button class="btn ${shown ? "" : "ghost"}" id="next">${shown ? "次の設問へ →" : "スキップ →"}</button>` : `<button class="btn" id="finish">結果を見る</button>`}
       </div>
-      ${p.kind === "past" ? `<p class="cite">${esc(p.cite)}（問題文・解答例）。解説・関連語は独自のものです。</p>` : ""}`;
+      ${p.kind === "past" ? `<p class="cite">${esc(p.cite)}（問題文・解答例。設問文は読みやすく整えるため一部改変）。解説・関連語は独自のものです。</p>` : ""}`;
 
     const ta = $("#answer"), cnt = $("#cnt");
     const upd = () => {
