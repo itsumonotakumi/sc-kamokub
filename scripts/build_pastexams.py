@@ -268,9 +268,10 @@ def build_exam(ex: dict, local_dir: Path | None) -> dict | None:
     questions = []
     for no in sorted(qsplit):
         q = qsplit[no]
+        theme = ex.get("themes", {}).get(str(no), q["theme"])
         questions.append({
             "no": no,
-            "theme": q["theme"],
+            "theme": theme,
             "cite": f"出典：{ex['source']} 問{no}",
             "pages": [base + q_imgs[p] for p in q["pages"] if p < len(q_imgs)],
             "ansPages": [base + a_imgs[p] for p in apages.get(no, range(len(a_imgs))) if p < len(a_imgs)],
@@ -278,7 +279,7 @@ def build_exam(ex: dict, local_dir: Path | None) -> dict | None:
             "commentText": ctext.get(no, ""),
             "slots": parse_slots(q["text"], noisy),
         })
-        print(f"  問{no}: {q['theme'] or '(テーマ不明)'} / {len(q['pages'])}p / 解答欄{len(questions[-1]['slots'])}")
+        print(f"  問{no}: {theme or '(テーマ不明)'} / {len(q['pages'])}p / 解答欄{len(questions[-1]['slots'])}")
     return {"id": ex["id"], "label": ex["label"], "source": ex["source"],
             "links": {k: ex.get(k) for k in ("qs", "ans", "cmnt")}, "questions": questions}
 
