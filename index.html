@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SC科目Bドリル</title>
+<meta name="description" content="情報処理安全確保支援士 科目B（旧午後）の過去問をスマホで解いて自己採点できる学習アプリ">
+<meta name="theme-color" content="#14213d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="backBtn" aria-label="戻る" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="topbar-title" id="title">SC科目Bドリル</div>
+  <button class="timer" id="timer" hidden aria-label="タイマー">
+    <span id="timerText">00:00</span>
+  </button>
+</header>
+<main id="app" class="app"></main>
+<nav class="tabbar" id="tabbar" hidden></nav>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-panel" role="dialog" aria-modal="true">
+    <button class="sheet-close" id="sheetClose" aria-label="閉じる">×</button>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
+<div class="zoom" id="zoom" hidden>
+  <button class="zoom-close" id="zoomClose" aria-label="閉じる">×</button>
+  <div class="zoom-inner" id="zoomInner"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
