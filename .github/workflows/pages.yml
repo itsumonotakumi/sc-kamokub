@@ -20,17 +20,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install poppler & Pillow
+      - name: Install poppler, Tesseract (jpn) & Pillow
         run: |
           sudo apt-get update
-          sudo apt-get install -y poppler-utils
+          sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-jpn
           pip install pillow
 
-      - name: Cache IPA PDFs
+      - name: Cache IPA PDFs & OCR results
         uses: actions/cache@v4
         with:
-          path: .cache/pdf
-          key: ipa-pdf-${{ hashFiles('scripts/sources.json') }}
+          path: .cache
+          key: ipa-${{ hashFiles('scripts/sources.json', 'scripts/build_pastexams.py') }}
+          restore-keys: ipa-
 
       - name: Import past exams (IPA PDF -> images + catalog.json)
         run: python3 scripts/build_pastexams.py

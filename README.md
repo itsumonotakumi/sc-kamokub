@@ -19,7 +19,7 @@
 3. **Actions** タブで「Build & Deploy to GitHub Pages」が走るのを待つ（初回は数分）
 4. `https://<ユーザー名>.github.io/<リポジトリ名>/` をスマホで開き、ホーム画面に追加
 
-ワークフローがIPAのPDFを取得 → `pdftotext`/`pdftoppm` で問ごとに分割・画像化 → `data/catalog.json` を生成してデプロイします。**PDFや画像はリポジトリにコミットしません。**
+ワークフローがIPAのPDFを取得 → `pdftoppm` で画像化。問題冊子は文字情報のないスキャンPDFなので、Tesseract（日本語）でOCRして問の区切りと設問を読み取り → `data/catalog.json` を生成してデプロイします。**PDFや画像はリポジトリにコミットしません。**
 
 ## 過去問を追加する
 
@@ -28,14 +28,14 @@
 ## 手元で動かす
 
 ```bash
-sudo apt install poppler-utils && pip install pillow
+sudo apt install poppler-utils tesseract-ocr tesseract-ocr-jpn && pip install pillow
 python3 scripts/build_pastexams.py          # IPAから取得して data/ を生成
 python3 -m http.server 8000                  # http://localhost:8000/
 ```
 
 ## 注意
 
-- 解答欄は問題文の「設問」から機械的に作っています。ずれたら解答画面の「解答欄を追加」で補ってください。
+- 解答欄はOCRした「設問」から作っています（空欄記号 a, b… は1つの欄にまとめています）。ずれたら解答画面の「解答欄を追加」で補ってください。
 - 解答例テキストはPDFから抽出したもので、表の崩れが出ることがあります。そのときは「解答例PDFの画像」を見てください。
 - 採点は自己採点の目安です（IPAは配点・採点基準を公表していません）。
 
