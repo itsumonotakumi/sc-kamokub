@@ -1,0 +1,56 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poppler & Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pip install pillow
+
+      - name: Cache IPA PDFs
+        uses: actions/cache@v4
+        with:
+          path: .cache/pdf
+          key: ipa-pdf-${{ hashFiles('scripts/sources.json') }}
+
+      - name: Import past exams (IPA PDF -> images + catalog.json)
+        run: python3 scripts/build_pastexams.py
+
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp -r index.html app.js style.css sw.js manifest.webmanifest icon.svg data _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

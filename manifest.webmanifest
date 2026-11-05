@@ -1,0 +1,11 @@
+{
+  "name": "SC科目Bドリル",
+  "short_name": "SC科目B",
+  "description": "情報処理安全確保支援士 科目B（旧午後）過去問ドリル",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f5f7",
+  "theme_color": "#14213d",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

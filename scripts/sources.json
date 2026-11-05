@@ -1,0 +1,61 @@
+{
+  "_comment": "IPA公開の情報処理安全確保支援士 午後（科目B）過去問。URLは https://www.ipa.go.jp/shiken/mondai-kaiotu/index.html の年度別ページから。追加するときはこの配列に足すだけ。",
+  "exams": [
+    {
+      "id": "2025r07a_pm",
+      "label": "令和7年度 秋期 午後",
+      "source": "令和7年度 秋期 情報処理安全確保支援士試験 午後",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07a_sc_pm_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07a_sc_pm_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07a_sc_pm_cmnt.pdf"
+    },
+    {
+      "id": "2025r07h_pm",
+      "label": "令和7年度 春期 午後",
+      "source": "令和7年度 春期 情報処理安全確保支援士試験 午後",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07h_sc_pm_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07h_sc_pm_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07h_sc_pm_cmnt.pdf"
+    },
+    {
+      "id": "2024r06a_pm",
+      "label": "令和6年度 秋期 午後",
+      "source": "令和6年度 秋期 情報処理安全確保支援士試験 午後",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06a_sc_pm_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06a_sc_pm_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06a_sc_pm_cmnt.pdf"
+    },
+    {
+      "id": "2024r06h_pm",
+      "label": "令和6年度 春期 午後",
+      "source": "令和6年度 春期 情報処理安全確保支援士試験 午後",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_sc_pm_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_sc_pm_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_sc_pm_cmnt.pdf"
+    },
+    {
+      "id": "2023r05a_pm",
+      "label": "令和5年度 秋期 午後",
+      "source": "令和5年度 秋期 情報処理安全確保支援士試験 午後",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05a_sc_pm_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05a_sc_pm_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05a_sc_pm_cmnt.pdf"
+    },
+    {
+      "id": "2023r05h_pm1",
+      "label": "令和5年度 春期 午後Ⅰ（旧形式）",
+      "source": "令和5年度 春期 情報処理安全確保支援士試験 午後Ⅰ",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm1_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm1_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm1_cmnt.pdf"
+    },
+    {
+      "id": "2023r05h_pm2",
+      "label": "令和5年度 春期 午後Ⅱ（旧形式）",
+      "source": "令和5年度 春期 情報処理安全確保支援士試験 午後Ⅱ",
+      "qs": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm2_qs.pdf",
+      "ans": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm2_ans.pdf",
+      "cmnt": "https://www.ipa.go.jp/shiken/mondai-kaiotu/ps6vr70000010d6y-att/2023r05h_sc_pm2_cmnt.pdf"
+    }
+  ]
+}
